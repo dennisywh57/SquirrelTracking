@@ -62,7 +62,7 @@ def stats(request):
         'avg_long': avg_long,
         'climbing': climbing,
         'chasing': chasing,
-        # 'age': age,
+        'age': age,
     }
 
     return render(request, 'sightings/stats.html', context)
