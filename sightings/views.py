@@ -19,10 +19,6 @@ def map(request):
     return render(request, 'sightings/map.html', context)
 
 
-def sightings(request):
-    squirrels = Squirrel.objects.all()
-    context = {'squirrels': squirrels}
-    return render(request, 'sightings/sightings.html', context)
 
 
 def detail(request, unique_squirrel_id):
