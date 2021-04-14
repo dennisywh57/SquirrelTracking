@@ -53,7 +53,9 @@ def stats(request):
     total = Squirrel.objects.count()
     avg_lat = squirrels.aggregate(Avg('latitude')).get('latitude__avg')
     avg_long = squirrels.aggregate(Avg('longitude')).get('longitude__avg')
-
+    climbing = squirrels.filter(climbing=True).count()
+    chasing = squirrels.filter(chasing=True).count()
+    age = list(squirrels.values_list('age').annotate(Count('age')))
     context = {
         'total': total,
         'avg_lat': avg_lat,
