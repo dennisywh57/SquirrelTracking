@@ -37,16 +37,6 @@ def detail(request, unique_squirrel_id):
     return render(request, 'sightings/detail.html', {'form': form, 'unique_squirrel_id': unique_squirrel_id})
 
 
-def add(request):
-    if request.method == "POST":
-        form = AddRequestForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/sightings/add')
-    else:
-        form = AddRequestForm()
-    return render(request, 'sightings/add.html', {'form': form})
-
 
 def stats(request):
     squirrels = Squirrel.objects.all()
