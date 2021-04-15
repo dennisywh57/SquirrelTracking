@@ -63,7 +63,7 @@ It is a web application with five pages in total implemented by Django framework
 
 ## Server Link
 <ul>
-  <li> xxxxdsdsdsdsdx </li>
+  <li> xxxxxxxxx </li>
 
 </ul>
 
